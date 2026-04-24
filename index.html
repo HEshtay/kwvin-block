@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://api.airtable.com">
+  <title>Kevin Block — Personal Training & Performance Coaching</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="index.html" class="nav-brand">Kevin Block</a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="methode.html">Methode</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="#coaching">Coaching</a></li>
+      <li><a href="#ueber-mich">Über mich</a></li>
+    </ul>
+
+    <a href="#anfrage" class="btn btn-primary nav-cta">Angebot anfragen</a>
+  </nav>
+
+  <main>
+
+    <!-- ── Section 1: Hero ────────────────────────────────
+         bg: #FFFFFF  ──────────────────────────────────── -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-content">
+        <span class="section-label">Personal Training &amp; Performance Coaching</span>
+
+        <h1>Die Architektur menschlicher Leistung neu definiert.</h1>
+
+        <p class="hero-body">
+          Amara Richtigas Trends praktizieren wir die Kunst der Verbesserung.
+          Maßgeschneiderte athletisches Coaching für die anspruchsvollsten Einzahlen,
+          der Präzision in jeder Bewegung verlangt.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#anfrage" class="btn btn-primary">Termin buchen</a>
+          <a href="methode.html" class="btn btn-secondary">Die Methode</a>
+        </div>
+      </div>
+
+      <div class="hero-image" aria-hidden="true">
+        <span>Athlete Photo</span>
+      </div>
+    </section>
+
+    <!-- ── Section 2: Services ────────────────────────────
+         bg: #F8F5EF ──────────────────────────────────── -->
+    <section class="section services" id="coaching" aria-label="Leistungen">
+      <div class="services-header">
+        <span class="section-label">Ausgewählte Leistungen</span>
+      </div>
+
+      <!-- Skeleton shown while JS loads; replaced by home.js -->
+      <div class="services-grid" id="services-grid">
+        <div class="service-card skeleton-card"></div>
+        <div class="service-card skeleton-card" style="border-left:var(--border-dark);border-right:var(--border-dark);"></div>
+        <div class="service-card skeleton-card"></div>
+      </div>
+    </section>
+
+    <!-- ── Section 3: Testimonials ────────────────────────
+         bg: #EDE8DF ──────────────────────────────────── -->
+    <section class="section testimonials" aria-label="Referenzen">
+      <div class="testimonials-header">
+        <span class="section-label">Stimmen</span>
+        <h2>Was Klienten sagen</h2>
+      </div>
+
+      <!-- Skeleton; replaced by home.js -->
+      <div class="testimonials-grid" id="testimonials-grid">
+        <div class="skeleton-card" style="height:180px;"></div>
+        <div class="skeleton-card" style="height:180px;"></div>
+      </div>
+    </section>
+
+    <!-- ── Section 4: CTA ─────────────────────────────────
+         bg: #FFFFFF ──────────────────────────────────── -->
+    <section class="cta-section" id="anfrage" aria-label="Anfrage">
+      <h2>Beginnen Sie heute Ihre architektonische Transformation.</h2>
+      <a href="mailto:hello@kevinblock.de" class="btn btn-primary">Zur Anfrage</a>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-brand">Kevin Block</a>
+
+      <nav aria-label="Footer-Navigation">
+        <ul class="footer-links" role="list">
+          <li><a href="methode.html">Methode</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="#coaching">Coaching</a></li>
+          <li><a href="#ueber-mich">Über mich</a></li>
+        </ul>
+      </nav>
+
+      <div></div><!-- grid spacer -->
+    </div>
+    <p class="footer-copy">© 2025 Kevin Block. Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/airtable.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://api.airtable.com">
+  <title>Journal — Kevin Block</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="index.html" class="nav-brand">Kevin Block</a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="methode.html">Methode</a></li>
+      <li><a href="journal.html" class="active">Journal</a></li>
+      <li><a href="index.html#coaching">Coaching</a></li>
+      <li><a href="index.html#ueber-mich">Über mich</a></li>
+    </ul>
+
+    <a href="index.html#anfrage" class="btn btn-primary nav-cta">Angebot anfragen</a>
+  </nav>
+
+  <main>
+
+    <!-- ── Section 1: Page Header ─────────────────────────
+         bg: #FFFFFF ──────────────────────────────────── -->
+    <header class="journal-header" aria-label="Journal-Kopfzeile">
+      <span class="section-label">Journal</span>
+      <h1>Gedanken zur Leistung</h1>
+      <p class="journal-subtitle">
+        Essays, Reflexionen und evidenzbasierte Einblicke zu Training,
+        Ernährung, Mindset und der Philosophie des bewussten Lebens.
+      </p>
+    </header>
+
+    <!-- ── Section 2: Featured Article ───────────────────
+         bg: #FFFFFF ──────────────────────────────────── -->
+    <section class="featured-article" aria-label="Empfohlener Artikel">
+      <!-- Skeleton; replaced by journal.js -->
+      <div id="featured-article">
+        <div class="featured-inner">
+          <div class="featured-image skeleton" style="min-height:480px;"></div>
+          <div class="featured-content" style="gap:16px;">
+            <div class="skeleton" style="height:12px;width:120px;"></div>
+            <div class="skeleton" style="height:40px;width:90%;margin-top:8px;"></div>
+            <div class="skeleton" style="height:80px;width:100%;margin-top:8px;"></div>
+            <div class="skeleton" style="height:40px;width:160px;margin-top:12px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Section 3: Articles Grid ───────────────────────
+         bg: #F8F5EF ──────────────────────────────────── -->
+    <section class="section articles-section" aria-label="Weitere Artikel">
+      <span class="section-label">Alle Beiträge</span>
+
+      <!-- Skeleton; replaced by journal.js -->
+      <div class="articles-grid" id="articles-grid">
+        <div class="article-card">
+          <div class="article-img-placeholder skeleton" style="height:220px;"></div>
+          <div class="skeleton" style="height:10px;width:100px;margin-top:16px;"></div>
+          <div class="skeleton" style="height:28px;width:80%;margin-top:12px;"></div>
+        </div>
+        <div class="article-card">
+          <div class="article-img-placeholder skeleton" style="height:220px;"></div>
+          <div class="skeleton" style="height:10px;width:100px;margin-top:16px;"></div>
+          <div class="skeleton" style="height:28px;width:80%;margin-top:12px;"></div>
+        </div>
+        <div class="article-card">
+          <div class="article-img-placeholder skeleton" style="height:220px;"></div>
+          <div class="skeleton" style="height:10px;width:100px;margin-top:16px;"></div>
+          <div class="skeleton" style="height:28px;width:80%;margin-top:12px;"></div>
+        </div>
+        <div class="article-card">
+          <div class="article-img-placeholder skeleton" style="height:220px;"></div>
+          <div class="skeleton" style="height:10px;width:100px;margin-top:16px;"></div>
+          <div class="skeleton" style="height:28px;width:80%;margin-top:12px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Section 4: Newsletter ──────────────────────────
+         bg: #EDE8DF ──────────────────────────────────── -->
+    <section class="section newsletter" aria-label="Newsletter">
+      <h2>Bleiben Sie im Kontext</h2>
+      <p class="newsletter-subtitle">
+        Monatliche Reflexionen zu Training, Leistung und der Kunst,
+        ein außergewöhnliches Leben zu gestalten.
+      </p>
+
+      <form class="newsletter-form">
+        <div class="form-field">
+          <label for="email">E-Mail-Adresse</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="ihre@email.de"
+            required
+            autocomplete="email"
+          >
+        </div>
+        <button type="submit" class="btn btn-primary">Abonnieren</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-brand">Kevin Block</a>
+
+      <nav aria-label="Footer-Navigation">
+        <ul class="footer-links" role="list">
+          <li><a href="methode.html">Methode</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="index.html#coaching">Coaching</a></li>
+          <li><a href="index.html#ueber-mich">Über mich</a></li>
+        </ul>
+      </nav>
+
+      <div></div>
+    </div>
+    <p class="footer-copy">© 2025 Kevin Block. Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/airtable.js"></script>
+  <script src="js/journal.js"></script>
+  <script src="js/newsletter.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://api.airtable.com">
+  <title>Die Methode — Kevin Block</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="index.html" class="nav-brand">Kevin Block</a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="methode.html" class="active">Methode</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="index.html#coaching">Coaching</a></li>
+      <li><a href="index.html#ueber-mich">Über mich</a></li>
+    </ul>
+
+    <a href="index.html#anfrage" class="btn btn-primary nav-cta">Angebot anfragen</a>
+  </nav>
+
+  <main>
+
+    <!-- ── Section 1: Hero ────────────────────────────────
+         bg: #F8F5EF ──────────────────────────────────── -->
+    <section class="methode-hero" aria-label="Methode Hero">
+      <span class="section-label">Ansatz</span>
+      <h1>Die Methode</h1>
+      <p class="methode-hero-subtitle">
+        Eine Vision in der Architektur der Leistung. Mit Disziplin auf beständige
+        definierte Taten — ein ganzheitliches System für dauerhafte Transformation.
+      </p>
+    </section>
+
+    <!-- ── Section 2: Pillars ─────────────────────────────
+         bg: #FFFFFF ──────────────────────────────────── -->
+    <section class="section pillars" id="ueber-mich" aria-label="Säulen der Methode">
+      <div class="services-header">
+        <span class="section-label">Die drei Säulen</span>
+      </div>
+
+      <!-- Skeleton; replaced by methode.js -->
+      <div class="services-grid" id="pillars-grid">
+        <div class="service-card skeleton-card"></div>
+        <div class="service-card skeleton-card" style="border-left:var(--border-dark);border-right:var(--border-dark);"></div>
+        <div class="service-card skeleton-card"></div>
+      </div>
+    </section>
+
+    <!-- ── Section 3: Quote & About ───────────────────────
+         bg: #EDE8DF ──────────────────────────────────── -->
+    <section class="quote-section" aria-label="Zitat und Person">
+      <div class="quote-image" aria-hidden="true">
+        <span>Kevin Block</span>
+      </div>
+
+      <div class="quote-content">
+        <blockquote class="quote-text">
+          &ldquo;Leistung ist nicht bloß ein Ergebnis; es ist ein akribisch gestalteter
+          Seinszustand, der sowohl Strenge als auch Anmut erfordert.&rdquo;
+        </blockquote>
+        <p class="quote-attribution">— Kevin Block, Personal Trainer &amp; Coach</p>
+      </div>
+    </section>
+
+    <!-- ── Section 4: About Text ──────────────────────────
+         bg: #FFFFFF ──────────────────────────────────── -->
+    <section class="section about-text-section" aria-label="Über Kevin Block">
+      <div class="about-text-inner">
+        <h2 class="about-heading">The Editorial Athlete</h2>
+
+        <div class="about-body">
+          <p>
+            Kevin Block glaubt, dass außergewöhnliche körperliche Leistung kein Zufall
+            ist — sie ist das Ergebnis einer sorgfältig durchdachten Methodik, die Körper
+            und Geist als untrennbare Einheit begreift. Mit über einem Jahrzehnt Erfahrung
+            im Hochleistungssport und in der Betreuung anspruchsvoller Klienten hat Kevin
+            ein System entwickelt, das weit über konventionelles Personal Training hinausgeht.
+          </p>
+          <p>
+            Seine Arbeit vereint biomechanische Präzision, Ernährungswissenschaft und
+            psychologische Konditionierung zu einem kohärenten Ganzen. Für Kevin ist
+            Training eine Form des Ausdrucks — eine Sprache, die, wenn sie mit Bewusstsein
+            gesprochen wird, jeden Aspekt des Lebens verändert. Er arbeitet ausschließlich
+            mit Klienten, die bereit sind, diese Tiefe einzugehen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Section 5: CTA ─────────────────────────────────
+         bg: #F8F5EF ──────────────────────────────────── -->
+    <section class="methode-cta" aria-label="Anfrage">
+      <h2>Bereit zu beginnen?</h2>
+      <p class="methode-cta-sub">Termin buchen — Ansicht mit mir</p>
+      <a href="index.html#anfrage" class="btn btn-primary">Konsultation buchen</a>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-brand">Kevin Block</a>
+
+      <nav aria-label="Footer-Navigation">
+        <ul class="footer-links" role="list">
+          <li><a href="methode.html">Methode</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="index.html#coaching">Coaching</a></li>
+          <li><a href="index.html#ueber-mich">Über mich</a></li>
+        </ul>
+      </nav>
+
+      <div></div>
+    </div>
+    <p class="footer-copy">© 2025 Kevin Block. Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/airtable.js"></script>
+  <script src="js/methode.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+{"t":0,"agent":"system","event":"skill_invoked","skill_name":"security-review"}
+{"t":0,"agent":"ae4647b","agent_type":"security-reviewer","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"ae4647b","agent_type":"security-reviewer","event":"agent_stop","success":true,"duration_ms":114971}
