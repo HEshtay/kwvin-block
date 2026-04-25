@@ -49,8 +49,9 @@ export const programType = defineType({
     defineField({
       name: "ctaHref",
       title: "Buchungs-Link",
-      type: "url",
+      type: "string",
       description: 'Optional. Standard: "/kontakt"',
+      validation: (rule) => rule.max(200),
     }),
     defineField({
       name: "order",

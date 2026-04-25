@@ -521,6 +521,8 @@ p {
   border-bottom: var(--border-dark);
 }
 
+.programme-left {}
+
 .programme-number {
   font-family: var(--font-serif);
   font-size: 4rem;
