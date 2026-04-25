@@ -129,7 +129,7 @@ const fallbackSiteChromeSettings: SiteChromeSettings = {
   brand: "Kevin Block",
   navAriaLabel: "Hauptnavigation",
   navItems: [
-    { key: "home", href: "/programme", label: "Programme" },
+    { key: "programme", href: "/programme", label: "Programme" },
     { key: "methode", href: "/methode", label: "Die Methode" },
     { key: "about", href: "/methode#ueber-mich", label: "Über mich" },
   ],

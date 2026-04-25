@@ -1,8 +1,15 @@
 // src/app/programme/page.tsx
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { getProgrammeContent } from "@/lib/site-data";
+
+export const metadata: Metadata = {
+  title: "Programme — Kevin Block",
+  description:
+    "Drei individuelle Coaching-Programme für Kraft, Leistung und ganzheitliche Entwicklung.",
+};
 
 export default async function ProgrammePage() {
   const { settings, programs } = await getProgrammeContent();
@@ -17,7 +24,7 @@ export default async function ProgrammePage() {
             {settings.heroEyebrow && (
               <span className="eyebrow">{settings.heroEyebrow}</span>
             )}
-            <h1>{settings.heroHeading}</h1>
+            <h1>{settings.heroHeading ?? "Programme"}</h1>
             {settings.heroSubtitle && (
               <p className="page-subtitle">{settings.heroSubtitle}</p>
             )}
@@ -77,7 +84,7 @@ export default async function ProgrammePage() {
 
         <section className="section-block cta-block cta-block-dark">
           <div className="cta-inner">
-            <h2>{settings.ctaHeading}</h2>
+            {settings.ctaHeading && <h2>{settings.ctaHeading}</h2>}
             <div className="hero-actions">
               <Link
                 href={settings.ctaButtonHref || "/kontakt"}
