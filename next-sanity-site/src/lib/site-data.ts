@@ -333,15 +333,16 @@ export async function getSiteChromeContent() {
 }
 
 export async function getProgrammeContent() {
-  const [settings, programs] = await Promise.all([
+  const [settings, programs, testimonials] = await Promise.all([
     safeFetch<ProgrammePageSettings>(
       programmePageQuery,
       fallbackProgrammePageSettings,
     ),
     safeFetch<Program[]>(programsQuery, fallbackPrograms),
+    safeFetch<Testimonial[]>(testimonialsQuery, fallbackTestimonials),
   ]);
 
-  return { settings, programs };
+  return { settings, programs, testimonials };
 }
 
 const fallbackImpressumPageSettings: ImpressumPageSettings = {

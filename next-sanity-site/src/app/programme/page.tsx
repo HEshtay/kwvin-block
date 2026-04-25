@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ProgrammePage() {
-  const { settings, programs } = await getProgrammeContent();
+  const { settings, programs, testimonials } = await getProgrammeContent();
 
   return (
     <div className="page-shell">
@@ -81,6 +81,34 @@ export default async function ProgrammePage() {
             </div>
           </div>
         </section>
+
+        {testimonials.length > 0 && (
+          <section
+            className="section-block testimonials-section programme-testimonials-section"
+            aria-label="Stimmen über Kevin Block"
+          >
+            <div className="section-inner">
+              <div className="testimonials-grid programme-testimonials-grid">
+                {testimonials.map((testimonial) => (
+                  <article
+                    key={testimonial._id}
+                    className="testimonial-card programme-testimonial-card"
+                  >
+                    <blockquote className="testimonial-quote">
+                      &ldquo;{testimonial.quote}&rdquo;
+                    </blockquote>
+
+                    {testimonial.author && (
+                      <p className="testimonial-author small-caps">
+                        {testimonial.author}
+                      </p>
+                    )}
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="section-block cta-block cta-block-dark">
           <div className="cta-inner">
