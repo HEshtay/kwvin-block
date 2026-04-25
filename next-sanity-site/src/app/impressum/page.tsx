@@ -1,3 +1,5 @@
+export const revalidate = 60;
+
 import type { Metadata } from "next";
 
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";

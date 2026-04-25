@@ -1,3 +1,5 @@
+export const revalidate = 60;
+
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -73,7 +75,9 @@ export default async function UeberMichPage() {
                     <h3>{license.title}</h3>
                     {(license.issuer || license.year) && (
                       <p className="small-caps">
-                        {[license.issuer, license.year].filter(Boolean).join(" · ")}
+                        {[license.issuer, license.year]
+                          .filter(Boolean)
+                          .join(" · ")}
                       </p>
                     )}
                   </article>
@@ -86,12 +90,17 @@ export default async function UeberMichPage() {
         {settings.quote && (
           <section className="section-block about-quote-block">
             <div className="section-inner about-quote-inner">
-              <blockquote className="about-quote">“{settings.quote}”</blockquote>
+              <blockquote className="about-quote">
+                “{settings.quote}”
+              </blockquote>
             </div>
           </section>
         )}
 
-        <section className="about-image-strip" aria-label="Trainingsstudio Impression" />
+        <section
+          className="about-image-strip"
+          aria-label="Trainingsstudio Impression"
+        />
 
         <section className="section-block cta-block">
           <div className="cta-inner">
