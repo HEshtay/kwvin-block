@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__filesystem__directory_tree",
+      "mcp__filesystem__list_allowed_directories",
+      "mcp__filesystem__read_text_file",
+      "Bash(node \"C:/Users/eshtay/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.6/skills/brainstorming/scripts/server.cjs\" --project-dir \"C:/Users/eshtay/dev/projects/kwvin-block/next-sanity-site\")",
+      "Bash(npx tsc *)",
+      "Bash(cd c:\\\\\\\\Users\\\\\\\\eshtay\\\\\\\\dev\\\\\\\\projects\\\\\\\\kwvin-block\\\\\\\\next-sanity-site)"
+    ]
+  }
+}

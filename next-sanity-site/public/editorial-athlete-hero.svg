@@ -1,0 +1,16 @@
+<svg width="900" height="1120" viewBox="0 0 900 1120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1120" fill="#2A2A2A"/>
+  <rect x="40" y="40" width="820" height="1040" fill="#1F1F1F" stroke="#666666" stroke-width="1"/>
+  <rect x="90" y="110" width="720" height="840" fill="#323232"/>
+  <circle cx="454" cy="278" r="74" fill="#515151"/>
+  <path d="M376 372C376 343.281 399.281 320 428 320H480C508.719 320 532 343.281 532 372V496H376V372Z" fill="#4A4A4A"/>
+  <rect x="360" y="490" width="200" height="250" fill="#434343"/>
+  <rect x="302" y="394" width="80" height="252" fill="#3A3A3A"/>
+  <rect x="554" y="394" width="80" height="252" fill="#3A3A3A"/>
+  <rect x="386" y="728" width="58" height="208" fill="#383838"/>
+  <rect x="476" y="728" width="58" height="208" fill="#383838"/>
+  <rect x="350" y="928" width="120" height="88" fill="#262626"/>
+  <rect x="438" y="928" width="120" height="88" fill="#262626"/>
+  <ellipse cx="450" cy="1012" rx="252" ry="38" fill="#5B5B5B" fill-opacity="0.35"/>
+  <text x="450" y="1068" fill="#D4C8B5" font-family="Georgia, serif" font-style="italic" font-size="28" text-anchor="middle">Editorial Athlete</text>
+</svg>

@@ -1,0 +1,26 @@
+# Next.js
+next-sanity-site/.next/
+next-sanity-site/node_modules/
+next-sanity-site/out/
+next-sanity-site/.vercel
+next-sanity-site/*.tsbuildinfo
+next-sanity-site/next-env.d.ts
+
+# Environment variables
+next-sanity-site/.env
+next-sanity-site/.env.local
+next-sanity-site/.env*.local
+# Keep the example file
+!next-sanity-site/.env.example
+
+# Claude Code / tooling state
+.omc/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*

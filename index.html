@@ -15,46 +15,32 @@
 
     <ul class="nav-links" role="list">
       <li><a href="methode.html">Methode</a></li>
-      <li><a href="journal.html">Journal</a></li>
-      <li><a href="#coaching">Coaching</a></li>
+      <li><a href="#pakete">Pakete</a></li>
       <li><a href="#ueber-mich">Über mich</a></li>
     </ul>
 
-    <a href="#anfrage" class="btn btn-primary nav-cta">Angebot anfragen</a>
+    <a href="contact.html" class="btn btn-primary nav-cta">Angebot anfragen</a>
   </nav>
 
   <main>
 
     <!-- ── Section 1: Hero ────────────────────────────────
-         bg: #FFFFFF  ──────────────────────────────────── -->
-    <section class="hero" aria-label="Hero">
-      <div class="hero-content">
-        <span class="section-label">Personal Training &amp; Performance Coaching</span>
-
-        <h1>Die Architektur menschlicher Leistung neu definiert.</h1>
-
-        <p class="hero-body">
-          Amara Richtigas Trends praktizieren wir die Kunst der Verbesserung.
-          Maßgeschneiderte athletisches Coaching für die anspruchsvollsten Einzahlen,
-          der Präzision in jeder Bewegung verlangt.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#anfrage" class="btn btn-primary">Termin buchen</a>
-          <a href="methode.html" class="btn btn-secondary">Die Methode</a>
-        </div>
-      </div>
-
-      <div class="hero-image" aria-hidden="true">
-        <span>Athlete Photo</span>
-      </div>
+         bg: #F8F5EF ──────────────────────────────────── -->
+    <section class="home-hero" aria-label="Hero">
+      <span class="section-label">Personal Training &amp; Performance Coaching</span>
+      <h1>Die Architektur menschlicher Leistung neu definiert.</h1>
+      <p class="home-hero-subtitle">
+        Maßgeschneidetertes athletisches Coaching für anspruchsvolle Klienten,
+        die Präzision in jeder Bewegung und nachhaltigen Wandel verlangen.
+      </p>
+      <div class="hero-divider" aria-hidden="true"></div>
     </section>
 
-    <!-- ── Section 2: Services ────────────────────────────
-         bg: #F8F5EF ──────────────────────────────────── -->
-    <section class="section services" id="coaching" aria-label="Leistungen">
+    <!-- ── Section 2: Pillars ─────────────────────────────
+         bg: #FFFFFF ──────────────────────────────────── -->
+    <section class="section pillars" id="ueber-mich" aria-label="Die Methode">
       <div class="services-header">
-        <span class="section-label">Ausgewählte Leistungen</span>
+        <span class="section-label">Die Methode</span>
       </div>
 
       <!-- Skeleton shown while JS loads; replaced by home.js -->
@@ -65,26 +51,51 @@
       </div>
     </section>
 
-    <!-- ── Section 3: Testimonials ────────────────────────
-         bg: #EDE8DF ──────────────────────────────────── -->
-    <section class="section testimonials" aria-label="Referenzen">
-      <div class="testimonials-header">
-        <span class="section-label">Stimmen</span>
-        <h2>Was Klienten sagen</h2>
+    <!-- ── Section 3: Packages ────────────────────────
+         bg: #F8F5EF ──────────────────────────────────── -->
+    <section class="section packages" id="pakete" aria-label="Pakete">
+      <div class="packages-header">
+        <span class="section-label">Ausgewählte Pakete</span>
       </div>
 
-      <!-- Skeleton; replaced by home.js -->
-      <div class="testimonials-grid" id="testimonials-grid">
-        <div class="skeleton-card" style="height:180px;"></div>
-        <div class="skeleton-card" style="height:180px;"></div>
+      <div class="packages-grid">
+        <div class="package-card">
+          <div class="package-name">Paket Eins</div>
+          <p class="package-desc">Beschreibung folgt. Maßgeschneiderte Betreuung für Ihre individuellen Ziele und Anforderungen.</p>
+          <a href="contact.html" class="btn btn-secondary">Anfragen</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-name">Paket Zwei</div>
+          <p class="package-desc">Beschreibung folgt. Intensives Coaching-Programm mit umfassender Begleitung und Analyse.</p>
+          <a href="contact.html" class="btn btn-secondary">Anfragen</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-name">Paket Drei</div>
+          <p class="package-desc">Beschreibung folgt. Exklusives Premium-Programm für höchste Ansprüche und nachhaltige Transformation.</p>
+          <a href="contact.html" class="btn btn-secondary">Anfragen</a>
+        </div>
       </div>
     </section>
 
-    <!-- ── Section 4: CTA ─────────────────────────────────
-         bg: #FFFFFF ──────────────────────────────────── -->
-    <section class="cta-section" id="anfrage" aria-label="Anfrage">
-      <h2>Beginnen Sie heute Ihre architektonische Transformation.</h2>
-      <a href="mailto:hello@kevinblock.de" class="btn btn-primary">Zur Anfrage</a>
+    <!-- ── Section 4: Social Follow ──────────────────────
+         bg: #EDE8DF ──────────────────────────────────── -->
+    <section class="follow-section" aria-label="Social Media">
+      <span class="section-label">Folge mir</span>
+      <div class="follow-links">
+        <a href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <span class="follow-separator" aria-hidden="true">·</span>
+        <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </section>
+
+    <!-- ── Section 5: CTA ─────────────────────────────────
+         bg: #1A1A1A ──────────────────────────────────── -->
+    <section class="home-cta" id="anfrage" aria-label="Anfrage">
+      <h2>Bereit zu beginnen?</h2>
+      <a href="contact.html" class="btn btn-inverted">Konsultation buchen</a>
+      <p class="home-cta-sub">Private Aufnahme nur auf Anfrage</p>
     </section>
 
   </main>
@@ -97,9 +108,10 @@
       <nav aria-label="Footer-Navigation">
         <ul class="footer-links" role="list">
           <li><a href="methode.html">Methode</a></li>
-          <li><a href="journal.html">Journal</a></li>
-          <li><a href="#coaching">Coaching</a></li>
+          <li><a href="#pakete">Pakete</a></li>
           <li><a href="#ueber-mich">Über mich</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
         </ul>
       </nav>
 
