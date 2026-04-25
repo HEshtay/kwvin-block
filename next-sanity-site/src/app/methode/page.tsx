@@ -44,7 +44,7 @@ export default async function MethodePage() {
           </div>
         </section>
 
-        <section className="section-block feature-block" id="ueber-mich">
+        <section className="section-block feature-block">
           <div className="section-inner feature-split">
             <figure
               className="editorial-figure"

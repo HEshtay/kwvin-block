@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+
+import { GlobalSocialRail } from "@/components/site-chrome";
+
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -21,7 +24,7 @@ export const metadata: Metadata = {
     "Editoriale Performance-Website mit Sanity-gestützten Inhalten für Kevin Block.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -32,7 +35,10 @@ export default function RootLayout({
       className={`${dmSans.variable} ${cormorantGaramond.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="site-body" suppressHydrationWarning>{children}</body>
+      <body className="site-body" suppressHydrationWarning>
+        <GlobalSocialRail />
+        {children}
+      </body>
     </html>
   );
 }

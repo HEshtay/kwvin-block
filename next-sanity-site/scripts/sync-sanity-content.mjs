@@ -314,7 +314,7 @@ const methodPillarDocs = [
   },
 ];
 
-async function seedContent() {
+async function syncContent() {
   const client = getCliClient({
     projectId,
     dataset,
@@ -325,32 +325,29 @@ async function seedContent() {
 
   const tx = client.transaction();
 
-  for (const doc of singletonDocs) {
-    tx.createIfNotExists(doc);
-  }
-
   for (const doc of [
+    ...singletonDocs,
     ...serviceDocs,
     ...testimonialDocs,
     ...methodPillarDocs,
     ...programDocs,
   ]) {
-    tx.createIfNotExists(doc);
+    tx.createOrReplace(doc);
   }
 
   await tx.commit();
 
-  console.log(`[sanity] Seeded initial content for dataset "${dataset}".`);
+  console.log(`[sanity] Synced content to dataset "${dataset}".`);
 }
 
 try {
-  await seedContent();
+  await syncContent();
 } catch (error) {
   const message = error instanceof Error ? error.message : String(error);
 
-  console.warn("[sanity] Could not seed initial content.");
+  console.warn("[sanity] Could not sync content.");
   console.warn(`[sanity] Reason: ${message}`);
   console.warn(
-    "[sanity] Set SANITY_API_WRITE_TOKEN (or run `sanity login`) and rerun startup.",
+    "[sanity] Set SANITY_API_WRITE_TOKEN (or run `sanity login`) and rerun.",
   );
 }

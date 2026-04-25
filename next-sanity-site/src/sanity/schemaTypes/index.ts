@@ -1,5 +1,7 @@
+import { aboutPageType } from "./aboutPageType";
 import { contactPageType } from "./contactPageType";
 import { homePageType } from "./homePageType";
+import { impressumPageType } from "./impressumPageType";
 import { methodPageType } from "./methodPageType";
 import { methodPillarType } from "./methodPillarType";
 import { programmePageType } from "./programmePageType";
@@ -12,8 +14,10 @@ export const schemaTypes = [
   siteChromeType,
   homePageType,
   methodPageType,
+  aboutPageType,
   programmePageType,
   contactPageType,
+  impressumPageType,
   serviceType,
   testimonialType,
   methodPillarType,

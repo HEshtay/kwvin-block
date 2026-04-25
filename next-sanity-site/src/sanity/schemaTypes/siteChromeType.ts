@@ -95,6 +95,58 @@ export const siteChromeType = defineType({
       type: "string",
       validation: (rule) => rule.max(180),
     }),
+    defineField({
+      name: "socialLabel",
+      title: "Social Bereich Label",
+      type: "string",
+      validation: (rule) => rule.max(120),
+    }),
+    defineField({
+      name: "socialLinks",
+      title: "Social Links",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            defineField({
+              name: "platform",
+              title: "Plattform",
+              type: "string",
+              options: {
+                list: [
+                  { title: "Instagram", value: "instagram" },
+                  { title: "YouTube", value: "youtube" },
+                ],
+                layout: "radio",
+              },
+              validation: (rule) => rule.required(),
+            }),
+            defineField({
+              name: "label",
+              title: "Label",
+              type: "string",
+              validation: (rule) => rule.required().max(120),
+            }),
+            defineField({
+              name: "href",
+              title: "Link",
+              type: "url",
+              validation: (rule) =>
+                rule.required().uri({
+                  scheme: ["http", "https"],
+                }),
+            }),
+          ],
+          preview: {
+            select: {
+              title: "label",
+              subtitle: "platform",
+            },
+          },
+        },
+      ],
+    }),
   ],
   preview: {
     prepare() {

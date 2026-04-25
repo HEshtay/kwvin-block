@@ -1,7 +1,9 @@
 import { sanityClient } from "@/lib/sanity.client";
 import {
+  aboutPageQuery,
   contactPageQuery,
   homePageQuery,
+  impressumPageQuery,
   methodPageQuery,
   methodPillarsQuery,
   programmePageQuery,
@@ -9,8 +11,10 @@ import {
   servicesQuery,
   siteChromeQuery,
   testimonialsQuery,
+  type AboutPageSettings,
   type ContactPageSettings,
   type HomePageSettings,
+  type ImpressumPageSettings,
   type MethodPageSettings,
   type MethodPillar,
   type Program,
@@ -131,7 +135,7 @@ const fallbackSiteChromeSettings: SiteChromeSettings = {
   navItems: [
     { key: "programme", href: "/programme", label: "Programme" },
     { key: "methode", href: "/methode", label: "Die Methode" },
-    { key: "about", href: "/methode#ueber-mich", label: "Über mich" },
+    { key: "about", href: "/ueber-mich", label: "Über mich" },
   ],
   navCtaLabel: "Beratung buchen",
   navCtaHref: "/kontakt",
@@ -141,6 +145,19 @@ const fallbackSiteChromeSettings: SiteChromeSettings = {
     { href: "/kontakt", label: "Kontakt" },
   ],
   footerCopy: "© 2026 Kevin Block. Alle Rechte vorbehalten.",
+  socialLabel: "Follow",
+  socialLinks: [
+    {
+      platform: "instagram",
+      label: "Instagram",
+      href: "https://www.instagram.com/",
+    },
+    {
+      platform: "youtube",
+      label: "YouTube",
+      href: "https://www.youtube.com/",
+    },
+  ],
 };
 
 const fallbackMethodPageSettings: MethodPageSettings = {
@@ -170,6 +187,42 @@ const fallbackContactPageSettings: ContactPageSettings = {
   body: "Für Anfragen zu Personal Training, Performance Coaching oder einer individuellen Beratung erreichen Sie mich direkt per E-Mail.",
   emailLabel: "hello@kevinblock.de",
   emailHref: "mailto:hello@kevinblock.de",
+};
+
+const fallbackAboutPageSettings: AboutPageSettings = {
+  eyebrow: "Über mich",
+  heading: "Kevin Block",
+  subtitle:
+    "Architekt der Performance. Mein Ansatz vereint sportwissenschaftliche Präzision mit der Ästhetik eines ganzheitlichen Lebensstils.",
+  journeyLabel: "Hintergrund",
+  journeyHeading: "Mein Weg",
+  journeyBody1:
+    "Geboren in einer Welt des Leistungssports, erkannte ich früh, dass wahre Stärke nicht durch Lautstärke, sondern durch Präzision und Beständigkeit definiert wird. Meine Karriere begann auf dem Spielfeld, doch mein Interesse galt stets der Architektur hinter der menschlichen Leistungsfähigkeit.",
+  journeyBody2:
+    "Nach Jahren der Arbeit mit Elite-Athleten und führenden Köpfen der Wirtschaft habe ich die Editorial Athlete Methode entwickelt: ein System, das sich vor herkömmlichen Fitness-Trends abwendet und stattdessen auf Langlebigkeit, Ästhetik und kognitive Klarheit setzt.",
+  journeyBody3:
+    "In meiner Arbeit als Mentor und Coach betrachte ich den Körper nicht als Werkzeug, sondern als ein fein abgestimmtes Ökosystem. Jede Bewegung, jede Mahlzeit und jeder Moment der Regeneration ist ein bewusster Akt der Gestaltung.",
+  quote:
+    "Die Qualität deines Lebens wird durch die Qualität deiner Bewegungen bestimmt.",
+  licensesHeading: "Lizenzen & Qualifikationen",
+  licenses: [
+    {
+      title: "A-Lizenz Personal Training",
+      issuer: "Deutsche Trainer Akademie",
+      year: "2023",
+    },
+    {
+      title: "Ernährungscoach Leistungssport",
+      issuer: "Institut für Sporternährung",
+      year: "2022",
+    },
+  ],
+  ctaHeading: "Bereit für Ihre Transformation?",
+  ctaBody:
+    "Exklusivität beginnt mit einem ersten Gespräch. Lassen Sie uns gemeinsam den Grundstein für Ihre neue Performance-Architektur legen.",
+  ctaButtonLabel: "Termin vereinbaren",
+  ctaButtonHref: "/kontakt",
+  footerBrand: "Kevin Block",
 };
 
 const fallbackPrograms: Program[] = [
@@ -265,6 +318,13 @@ export async function getContactPageContent() {
   );
 }
 
+export async function getAboutPageContent() {
+  return safeFetch<AboutPageSettings>(
+    aboutPageQuery,
+    fallbackAboutPageSettings,
+  );
+}
+
 export async function getSiteChromeContent() {
   return safeFetch<SiteChromeSettings>(
     siteChromeQuery,
@@ -282,4 +342,28 @@ export async function getProgrammeContent() {
   ]);
 
   return { settings, programs };
+}
+
+const fallbackImpressumPageSettings: ImpressumPageSettings = {
+  eyebrow: "Rechtliches",
+  heading: "Impressum",
+  providerName: "Kevin Block",
+  providerAddress: "Musterstraße 1\n10115 Berlin\nDeutschland",
+  emailLabel: "hello@kevinblock.de",
+  emailHref: "mailto:hello@kevinblock.de",
+  ustIdNr: "DE000000000",
+  verantwortlich: "Kevin Block\nMusterstraße 1\n10115 Berlin",
+  haftungInhalte:
+    "Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+  haftungLinks:
+    "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
+  urheberrecht:
+    "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
+};
+
+export async function getImpressumPageContent() {
+  return safeFetch<ImpressumPageSettings>(
+    impressumPageQuery,
+    fallbackImpressumPageSettings,
+  );
 }

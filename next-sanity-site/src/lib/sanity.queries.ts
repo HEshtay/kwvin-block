@@ -71,6 +71,12 @@ export type SiteLink = {
   href: string;
 };
 
+export type SocialLink = {
+  platform: "instagram" | "youtube";
+  label: string;
+  href: string;
+};
+
 export type SiteChromeSettings = {
   brand?: string;
   navAriaLabel?: string;
@@ -80,6 +86,8 @@ export type SiteChromeSettings = {
   footerAriaLabel?: string;
   footerLinks?: SiteLink[];
   footerCopy?: string;
+  socialLabel?: string;
+  socialLinks?: SocialLink[];
 };
 
 export type MethodPageSettings = {
@@ -104,6 +112,31 @@ export type ContactPageSettings = {
   body?: string;
   emailLabel?: string;
   emailHref?: string;
+};
+
+export type AboutLicense = {
+  title: string;
+  issuer?: string;
+  year?: string;
+};
+
+export type AboutPageSettings = {
+  eyebrow?: string;
+  heading?: string;
+  subtitle?: string;
+  journeyLabel?: string;
+  journeyHeading?: string;
+  journeyBody1?: string;
+  journeyBody2?: string;
+  journeyBody3?: string;
+  quote?: string;
+  licensesHeading?: string;
+  licenses?: AboutLicense[];
+  ctaHeading?: string;
+  ctaBody?: string;
+  ctaButtonLabel?: string;
+  ctaButtonHref?: string;
+  footerBrand?: string;
 };
 
 export const homePageQuery = groq`
@@ -137,7 +170,13 @@ export const siteChromeQuery = groq`
       label,
       href
     },
-    footerCopy
+    footerCopy,
+    socialLabel,
+    socialLinks[]{
+      platform,
+      label,
+      href
+    }
   }
 `;
 
@@ -166,6 +205,31 @@ export const contactPageQuery = groq`
     body,
     emailLabel,
     emailHref
+  }
+`;
+
+export const aboutPageQuery = groq`
+  *[_type == "aboutPage"][0] {
+    eyebrow,
+    heading,
+    subtitle,
+    journeyLabel,
+    journeyHeading,
+    journeyBody1,
+    journeyBody2,
+    journeyBody3,
+    quote,
+    licensesHeading,
+    licenses[]{
+      title,
+      issuer,
+      year
+    },
+    ctaHeading,
+    ctaBody,
+    ctaButtonLabel,
+    ctaButtonHref,
+    footerBrand
   }
 `;
 
@@ -212,5 +276,35 @@ export const programmePageQuery = groq`
     ctaHeading,
     ctaButtonLabel,
     ctaButtonHref
+  }
+`;
+
+export type ImpressumPageSettings = {
+  eyebrow?: string;
+  heading?: string;
+  providerName?: string;
+  providerAddress?: string;
+  emailLabel?: string;
+  emailHref?: string;
+  ustIdNr?: string;
+  verantwortlich?: string;
+  haftungInhalte?: string;
+  haftungLinks?: string;
+  urheberrecht?: string;
+};
+
+export const impressumPageQuery = groq`
+  *[_type == "impressumPage"][0] {
+    eyebrow,
+    heading,
+    providerName,
+    providerAddress,
+    emailLabel,
+    emailHref,
+    ustIdNr,
+    verantwortlich,
+    haftungInhalte,
+    haftungLinks,
+    urheberrecht
   }
 `;

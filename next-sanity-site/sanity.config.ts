@@ -22,6 +22,10 @@ const structure: StructureResolver = (S) =>
         .id("methodPage")
         .child(S.document().schemaType("methodPage").documentId("methodPage")),
       S.listItem()
+        .title("Über mich Seite")
+        .id("aboutPage")
+        .child(S.document().schemaType("aboutPage").documentId("aboutPage")),
+      S.listItem()
         .title("Kontaktseite")
         .id("contactPage")
         .child(
@@ -34,6 +38,7 @@ const structure: StructureResolver = (S) =>
             "siteChrome",
             "homePage",
             "methodPage",
+            "aboutPage",
             "contactPage",
           ].includes(item.getId() || ""),
       ),
@@ -59,6 +64,7 @@ export default defineConfig({
               "siteChrome",
               "homePage",
               "methodPage",
+              "aboutPage",
               "contactPage",
             ].includes(item.templateId),
         );

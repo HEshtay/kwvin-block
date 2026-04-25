@@ -9,7 +9,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync:content": "node ./scripts/sync-sanity-content.mjs"
   },
   "dependencies": {
     "@sanity/image-url": "^2.1.1",
