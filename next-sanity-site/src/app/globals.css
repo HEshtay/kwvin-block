@@ -859,6 +859,17 @@ p {
     --pad-v: 72px;
   }
 
+  .vertical-divider {
+    height: 38px;
+    margin-top: 12px;
+  }
+
+  .page-header-block {
+    padding-top: 52px;
+    padding-bottom: 32px;
+    background: var(--surface);
+  }
+
   .services-grid,
   .pillars-grid,
   .testimonials-grid,
